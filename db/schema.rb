@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_14_034900) do
     t.integer "user_id"
     t.integer "time"
     t.string "date"
+    t.string "location"
     t.string "instrument"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
