@@ -1,11 +1,21 @@
 class BookingsController < ApplicationController
-    before_action :authenticate_user
-    before_action :set_booking, only: [:show, :update, :destroy]
+    # before_action :authenticate_user
+    before_action :set_booking, only: [:show, :update, :destroy, :mybookings]
+
     
     def index
         @bookings = Booking.all
 
         render json: @bookings
+    end
+
+    def mybookings
+        @bookings = []
+            current_user.bookings.order("updated_at DESC").each do |message|
+            @bookings << bookings.transform_booking
+    end
+
+    render json: @bookings
     end
 
     def show
@@ -32,6 +42,7 @@ class BookingsController < ApplicationController
             render json: @booking.errors, status: :unprocessable_entity
         end
     end
+
     
     def destroy
         @booking.destroy
@@ -43,6 +54,7 @@ class BookingsController < ApplicationController
     end
 
     def booking_params
-        params.permit(:text)
+        params.permit(:time, :date, :location, :instrument, :user_id)
     end
+
 end
