@@ -18,7 +18,7 @@ if Price.count == 0
 end
 
 if Booking.count == 0
-    Booking.create!(time: 1300, date: "Monday", location: "studio", instrument: "piano", user_id: 1 )
-    Booking.create!(time: 1200, date: "Wednesday", location: "studio", instrument: "guitar",  user_id: 2)
-    Booking.create!(time: 1000, date: "Friday", location: "studio",  instrument: "piano",  user_id: 2)
+    Booking.create!(time: "10:00 PM", date: "Monday", location: "studio", instrument: "piano", user_id: 1 )
+    Booking.create!(time: "12:00 PM", date: "Wednesday", location: "studio", instrument: "guitar",  user_id: 2)
+    Booking.create!(time: "08:00 AM", date: "Friday", location: "studio",  instrument: "piano",  user_id: 2)
 end
