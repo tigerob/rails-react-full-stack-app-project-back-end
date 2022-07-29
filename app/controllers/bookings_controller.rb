@@ -54,7 +54,11 @@ class BookingsController < ApplicationController
     end
 
     def booking_params
-        params.permit(:time, :date, :location, :instrument, :user_id)
+        params.permit(:time, :date, :location, :instrument, :user_id, :username)
+    end
+
+    def username 
+        
     end
 
 end
