@@ -16,7 +16,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_14_034900) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "time"
+    t.string "username"
+    t.string "time"
     t.string "date"
     t.string "location"
     t.string "instrument"
