@@ -1,6 +1,6 @@
 class PricesController < ApplicationController
-before_action :is_admin, only: [:update]
-before_action :auth_params, only: [:update]
+
+    before_action :set_prices, only: [:update]
 
     def index
         @prices = Price.all
@@ -8,24 +8,21 @@ before_action :auth_params, only: [:update]
     end
 
     def update
-                @price.update(auth_params)
-            if @price.save
-                redirect_to "/price", notice: "Your profile has been updated successfully."
-            else
-                redirect_to "/", alert: "Something went wrong with your changes please try again."
-            end
+        if @price.update(prices_params)
+            render json: @price
+        else
+            render json: @price.errors, status: :unprocessable_entity
+        end
     end
 
     private
 
-    def is_admin
-        unless current_user.is_admin == true
-            redirect_to '/', :alert => "Don't have permission!"
-        end
+    def set_prices
+        @price = Price.find(params[:id])
     end
 
-    def auth_params
-        (params.require(:prices).permit(:price))
+    def prices_params
+        params.permit(:price, :id)
     end
 
 end
