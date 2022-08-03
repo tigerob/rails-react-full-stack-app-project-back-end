@@ -1,24 +1,13 @@
-# README
+# Project: Rails & React Booking App - *Mia Music Bookings*
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Deployed website:
 
-Things you may want to cover:
+https://mia-music-studios.netlify.app/
 
-* Ruby version
+### Github repository (back end):
 
-* System dependencies
+https://github.com/Don-Heal/Mia_Music_Rails_Api
 
-* Configuration
+### Github repository (front end):
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://github.com/Don-Heal/Mia_Music_React
