@@ -4,10 +4,10 @@
 
 https://mia-music-studios.netlify.app/
 
-### Github repository (back end):
+### GitHub repository (back end):
 
 https://github.com/Don-Heal/Mia_Music_Rails_Api
 
-### Github repository (front end):
+### GitHub repository (front end):
 
 https://github.com/Don-Heal/Mia_Music_React
