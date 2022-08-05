@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
     resources :prices
     resources :bookings
+    resources :users
 
     scope '/auth' do
         post '/signup', to: 'users#create'
